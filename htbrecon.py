@@ -51,6 +51,7 @@ def basic ():
     os.system('nmap -sC -sV -oA '+ filename + ip +)
     os.system('nikto -h '+ip)
     os.system('gobuster dir -u '+ url +' -w ' + wordlist + '-o dirscan')
+    os.system
 
 def medium():
     print("Starting Medium Level Scan....\n")
@@ -59,3 +60,29 @@ def medium():
     os.system('gobuster')
 
 def intense
+
+# Nmap Scans:
+
+def nmap(x):
+    if x == 1:
+        os.system('nmap -sP -oN pingscan.txt ' + ip);
+    elif x == 2:
+        os.system('nmap -sC -sV -oN medium_scan.txt '+ ip);
+    elif x == 3:
+        os.system('sudo nmap -sS -sV -oN intense_scan.txt ' + ip '> /dev/null');
+    elif x == 4:
+        os.system('sudo nmap -sU -sV -oN udp_scan.txt ' + ip + ' > /dev/null');
+    elif x == 5:
+        os.system('sudo nmap -sS -T4 -O -sV -p- all_port_scan.txt ' + ip ' > /dev/null');
+
+# Gobuster Scans:
+
+def gob(y):
+    if y == 1:
+        os.system('gobuster dir -u http://' + ip + ' -w ' + wordlist ' -o dirscan.txt > /dev/null');
+    elif y == 2:
+        os.system('gobuster dir -u http://' + ip + ' -w ' + wordlist ' -o dirscan.txt > /dev/null');
+
+# Nikto Scans:
+# Sub Domain Scan:
+# 
