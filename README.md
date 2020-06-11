@@ -7,7 +7,7 @@
 
 
 ## Requirements
-* Tmux `sudo apt install tmux'
+* Tmux `sudo apt install tmux`
 * Masscan
 * Nmap
 * Gobuster
