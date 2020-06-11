@@ -1,41 +1,32 @@
-# This is under work and INCOMPLETE !
+# HTB-Recon
 
-# About
-These scripts help in HackTheBox CTF.
-Module-1 Automates the basic and advanced recon on htb machines
-Module-2 Under Work
-
-# Dependencies
-Module-1:
-	1. nmap
-	2. gobuster
-	3. sub domain scan
-	4. 
-
-Module-2:
-	
-
-# How to use
-
-./recon <ip-address> <level>
-
-ip-address : The ip of the machine
-level : The level of recon 
-
-# Recon Level
-
-Level 1: 
-	basic nmap default script scan 
-	gobuster scan with common dir names
-
-Level 2: 
-	basic nmap default script scan
-	nmap udp scan
-	gobuster scan with medium dir list(seclists)
-
-Level 3:
-	intense nmap scan
-	nmap udp scan
-	gobuster scan with user defined dir
+## About
+* This script creates a multipane-multiwindow tmux session.
+* Creates different panes for different tasks.
+* Automatically types basic enum commands for you, just just gotta hit enter..!!!
 
 
+## Requirements
+* Tmux `sudo apt install tmux'
+* Masscan
+* Nmap
+* Gobuster
+* ffuf ( Install and place it in /opt )
+
+## Usage
+* ./htb-recon.sh <IP> <Name of box> <OS>
+* Example: `./htb-recon.sh 10.10.10.10. ServMon Windows`
+* Then attach the session by `tmux a -t htb_recon`
+
+## What it does
+* Creates a workspace in your home dir.
+* Creates different folders to keep things organized.
+* Creates a Notes.md file to keep your notes.
+* exports the ip to a env variable so you don't have to type it again and again
+  , you can access it by `echo $target`
+
+## Contribute
+* Feel free to contribute to this repo.
+
+## Todos
+* The script should send recon commands based on os type
