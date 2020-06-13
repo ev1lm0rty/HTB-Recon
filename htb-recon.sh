@@ -46,7 +46,7 @@ then
   tmux send-keys -t htb_recon:NOTES 'vi Notes.md'
 
 else
-  echo "Usage: ./htb-recon.sh <IP> <Name_of_Machin> <OS> "
+  echo "Usage: ./htb-recon.sh <IP> <Name_of_Machine> <OS> "
   echo "Example: ./workspace.sh 10.10.10.180 ServMon Windows"
 
 fi
